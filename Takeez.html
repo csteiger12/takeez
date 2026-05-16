@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>St. Charles County Junk Removal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Inter',sans-serif;
+      color:#222;
+      line-height:1.6;
+      background:#f7f9fb;
+    }
+
+    a{
+      text-decoration:none;
+    }
+
+    img{
+      max-width:100%;
+      display:block;
+    }
+
+    .container{
+      width:90%;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    /* HEADER */
+
+    header{
+      background:#0b1f33;
+      padding:18px 0;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    .nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .logo{
+      color:#fff;
+      font-size:1.7rem;
+      font-weight:800;
+    }
+
+    .logo span{
+      color:#33c46b;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:30px;
+    }
+
+    nav a{
+      color:#fff;
+      font-weight:500;
+      transition:.3s;
+    }
+
+    nav a:hover{
+      color:#33c46b;
+    }
+
+    .btn{
+      display:inline-block;
+      background:#33c46b;
+      color:#fff;
+      padding:14px 28px;
+      border-radius:8px;
+      font-weight:700;
+      transition:.3s;
+    }
+
+    .btn:hover{
+      background:#28a85a;
+      transform:translateY(-2px);
+    }
+
+    /* HERO */
+
+    .hero{
+      background:
+        linear-gradient(rgba(11,31,51,.75), rgba(11,31,51,.75)),
+        url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1600&auto=format&fit=crop')
+        center/cover no-repeat;
+      min-height:88vh;
+      display:flex;
+      align-items:center;
+      color:#fff;
+    }
+
+    .hero-content{
+      max-width:650px;
+    }
+
+    .hero h1{
+      font-size:3.5rem;
+      line-height:1.1;
+      margin-bottom:20px;
+      font-weight:800;
+    }
+
+    .hero p{
+      font-size:1.15rem;
+      margin-bottom:35px;
+      color:#e4e7eb;
+    }
+
+    .hero-buttons{
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .secondary-btn{
+      background:transparent;
+      border:2px solid #fff;
+    }
+
+    .secondary-btn:hover{
+      background:#fff;
+      color:#0b1f33;
+    }
+
+    /* SERVICES */
+
+    .section{
+      padding:90px 0;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:60px;
+    }
+
+    .section-title h2{
+      font-size:2.5rem;
+      color:#0b1f33;
+      margin-bottom:15px;
+    }
+
+    .section-title p{
+      color:#667085;
+      max-width:700px;
+      margin:auto;
+    }
+
+    .services-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:30px;
+    }
+
+    .service-card{
+      background:#fff;
+      padding:35px;
+      border-radius:16px;
+      box-shadow:0 8px 24px rgba(0,0,0,.06);
+      transition:.3s;
+    }
+
+    .service-card:hover{
+      transform:translateY(-8px);
+    }
+
+    .service-icon{
+      font-size:2.5rem;
+      margin-bottom:20px;
+    }
+
+    .service-card h3{
+      margin-bottom:15px;
+      color:#0b1f33;
+    }
+
+    .service-card p{
+      color:#667085;
+    }
+
+    /* ABOUT */
+
+    .about{
+      background:#fff;
+    }
+
+    .about-content{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:60px;
+      align-items:center;
+    }
+
+    .about-text h2{
+      font-size:2.4rem;
+      margin-bottom:20px;
+      color:#0b1f33;
+    }
+
+    .about-text p{
+      margin-bottom:18px;
+      color:#667085;
+    }
+
+    .about-list{
+      list-style:none;
+      margin-top:25px;
+    }
+
+    .about-list li{
+      margin-bottom:14px;
+      font-weight:600;
+      color:#0b1f33;
+    }
+
+    /* PROCESS */
+
+    .process{
+      background:#eef3f7;
+    }
+
+    .process-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:30px;
+    }
+
+    .process-card{
+      text-align:center;
+      background:#fff;
+      padding:35px 25px;
+      border-radius:16px;
+    }
+
+    .step-number{
+      width:65px;
+      height:65px;
+      margin:auto;
+      border-radius:50%;
+      background:#33c46b;
+      color:#fff;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      font-size:1.5rem;
+      font-weight:800;
+      margin-bottom:20px;
+    }
+
+    /* CTA */
+
+    .cta{
+      background:#0b1f33;
+      color:#fff;
+      text-align:center;
+      padding:80px 20px;
+    }
+
+    .cta h2{
+      font-size:2.8rem;
+      margin-bottom:20px;
+    }
+
+    .cta p{
+      max-width:700px;
+      margin:0 auto 35px;
+      color:#d0d5dd;
+    }
+
+    /* FOOTER */
+
+    footer{
+      background:#07131f;
+      color:#c8d0d8;
+      padding:50px 0 20px;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:40px;
+      margin-bottom:40px;
+    }
+
+    .footer-column h3{
+      color:#fff;
+      margin-bottom:20px;
+    }
+
+    .footer-column p,
+    .footer-column a{
+      color:#c8d0d8;
+      margin-bottom:10px;
+      display:block;
+    }
+
+    .footer-bottom{
+      text-align:center;
+      border-top:1px solid rgba(255,255,255,.08);
+      padding-top:20px;
+      font-size:.95rem;
+    }
+
+    /* MOBILE */
+
+    @media(max-width:768px){
+
+      .hero h1{
+        font-size:2.5rem;
+      }
+
+      nav ul{
+        gap:15px;
+      }
+
+      .hero-buttons{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container nav">
+      <div class="logo">STL <span>Junk Removal</span></div>
+
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Fast & Affordable Junk Removal in St. Charles County, MO</h1>
+
+        <p>
+          We haul away furniture, appliances, yard waste, construction debris,
+          and more. Same-day service available throughout St. Charles County.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#" class="btn">Get Free Estimate</a>
+          <a href="#" class="btn secondary-btn">Call Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Our Junk Removal Services</h2>
+        <p>
+          Residential and commercial junk hauling solutions designed
+          to keep your property clean and clutter-free.
+        </p>
+      </div>
+
+      <div class="services-grid">
+
+        <div class="service-card">
+          <div class="service-icon">🛋️</div>
+          <h3>Furniture Removal</h3>
+          <p>
+            We remove couches, mattresses, dressers, tables,
+            and other bulky household items.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🧱</div>
+          <h3>Construction Debris</h3>
+          <p>
+            Cleanup services for remodeling projects,
+            roofing debris, drywall, and demolition waste.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🌿</div>
+          <h3>Yard Waste Removal</h3>
+          <p>
+            Branches, leaves, brush, fencing, and storm debris
+            hauled away quickly and efficiently.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🏢</div>
+          <h3>Commercial Cleanouts</h3>
+          <p>
+            Office cleanouts, storage units, retail spaces,
+            and property management junk removal.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section about">
+    <div class="container about-content">
+
+      <div class="about-text">
+        <h2>Why Choose Our Team?</h2>
+
+        <p>
+          We proudly serve homeowners and businesses throughout
+          St. Charles County with dependable junk hauling services.
+        </p>
+
+        <p>
+          Our crew arrives on time, provides upfront pricing,
+          and ensures your property is left clean after every job.
+        </p>
+
+        <ul class="about-list">
+          <li>✔ Licensed & Insured</li>
+          <li>✔ Eco-Friendly Disposal</li>
+          <li>✔ Same-Day Availability</li>
+          <li>✔ Locally Owned & Operated</li>
+        </ul>
+      </div>
+
+      <div>
+        <img
+          src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop"
+          alt="Junk Removal Crew"
+          style="border-radius:20px;"
+        />
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="section process">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>How It Works</h2>
+      </div>
+
+      <div class="process-grid">
+
+        <div class="process-card">
+          <div class="step-number">1</div>
+          <h3>Book Appointment</h3>
+          <p>Call us or request a quote online.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="step-number">2</div>
+          <h3>Free Estimate</h3>
+          <p>We provide transparent upfront pricing.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="step-number">3</div>
+          <h3>We Haul It Away</h3>
+          <p>Our crew removes and loads all junk safely.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="step-number">4</div>
+          <h3>Clean Finish</h3>
+          <p>We sweep up and leave your space spotless.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container">
+      <h2>Ready To Remove Your Junk?</h2>
+
+      <p>
+        Contact our St. Charles County junk removal team today
+        for fast, affordable, and hassle-free service.
+      </p>
+
+      <a href="#" class="btn">Schedule Pickup</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-column">
+          <h3>STL Junk Removal</h3>
+          <p>
+            Professional junk hauling services across
+            St. Charles County, Missouri.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Service Areas</h3>
+          <p>St. Charles</p>
+          <p>O'Fallon</p>
+          <p>Wentzville</p>
+          <p>Lake St. Louis</p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Contact</h3>
+          <a href="tel:5555555555">(555) 555-5555</a>
+          <a href="mailto:info@stljunkremoval.com">
+            info@stljunkremoval.com
+          </a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        © 2026 STL Junk Removal. All Rights Reserved.
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
